@@ -88,7 +88,6 @@ class UserViewSet(ModelViewSet):
         # return queryset.none()
 
     def get_serializer_class(self):
-        print(self.action)
         if self.action in ['create', 'update', 'partial_update']:
             return UserCreateSerializer
         return UserDefaultSerializer

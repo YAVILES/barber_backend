@@ -67,7 +67,6 @@ class UserCreateSerializer(serializers.ModelSerializer):
                         photo=photo
                     )
                     user.current_photo_id = photo_user.id
-                    print(user.current_photo_id)
                     user.save(update_fields=["current_photo_id"])
                    # send_email.delay('Clave Temporal B2B', password, [email])
         except ValidationError as error:
@@ -95,7 +94,7 @@ class UserCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'email', 'password', 'name', 'last_name', 'full_name', 'direction', 'phone',
-                  'point', 'is_superuser', 'groups', 'info', 'is_barber', 'about', 'photo',)
+                  'point', 'is_superuser', 'info', 'is_barber', 'about', 'photo',)
 
 
 class UserDefaultSerializer(DynamicFieldsMixin, serializers.ModelSerializer):
