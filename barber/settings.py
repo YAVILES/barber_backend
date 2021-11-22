@@ -48,7 +48,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '194.163.161.64']
 
 
 # Application definition
@@ -174,7 +174,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = env('MEDIA_URL')
 # '/home/clientesgrupobtp/public_html/dev/media/'
-MEDIA_ROOT = 'C:/xampp/htdocs/'  # os.path.join(BASE_DIR, 'media').replace('\\', '/')
+MEDIA_ROOT = '/var/www/html/barber/'  # 'C:/xampp/htdocs/'  # os.path.join(BASE_DIR, 'media').replace('\\', '/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
