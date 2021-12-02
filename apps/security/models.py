@@ -58,7 +58,7 @@ class User(AbstractBaseUser, PermissionsMixin, ModelBase):
     status = models.SmallIntegerField(choices=STATUS, default=ACTIVE, verbose_name=_('status'))
     is_barber = models.BooleanField(null=True, verbose_name=_('is verified'), default=False)
     is_superuser = models.BooleanField(verbose_name=_('is superuser'), default=False)
-    is_active = models.BooleanField(verbose_name=_('is superuser'), default=True)
+    is_active = models.BooleanField(verbose_name=_('is active'), default=True)
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['name', 'last_name', 'phone']
 
